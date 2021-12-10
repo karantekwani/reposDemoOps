@@ -19,5 +19,7 @@ echo "Number of file copying:"${#myArray[@]}
 for (( i = 0 ; i < ${#myArray[@]} ; i++))
 do
   echo ${myArray[$i]}
-  cp --parent ${myArray[$i]} reports/
+  if [  -f  ${myArray[$i]}]; then
+	cp --parent ${myArray[$i]} reports/
+  fi
 done
