@@ -8,6 +8,11 @@ hooks:
     - location: gitStatus.sh
       timeout: 300
       runas: root
+	  
+  ValidateService:
+    - location: encrypt.sh
+      timeout: 300
+      runas: root
 
   # ApplicationStart:
   #   - location: scripts/startserver.sh
