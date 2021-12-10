@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /appspec.yml
+    destination: /home/ubuntu/repo/demoRepo
+hooks:
+  ApplicationStart:
+    - location: gitStatus.sh
+      timeout: 300
+      runas: root
+
+  # ApplicationStart:
+  #   - location: scripts/startserver.sh
+  #     timeout: 300
+  #     runas: root
+
+  # ValidateServices:
+  #   - location: scripts/validateservice.sh
+  #     timeout: 300
