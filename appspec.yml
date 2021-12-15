@@ -5,7 +5,7 @@ files:
     destination: /home/ubuntu/repo/demoRepo
 hooks:
   ApplicationStart:
-    - location: gitStatus.sh
+    - location: download.sh
       timeout: 300
       runas: root
 
