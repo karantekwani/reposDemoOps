@@ -5,11 +5,11 @@ files:
     destination: /home/ubuntu/repo/demoRepo
 hooks:
   ApplicationStart:
-    - location: download.sh
+    - location: backup.sh
       timeout: 300
       runas: root
 
   ValidateService:
-    - location: encrypt.sh
+    - location: download.sh
       timeout: 300
       runas: root
