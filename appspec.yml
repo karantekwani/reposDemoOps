@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /appspec.yml
+    destination: /home/ubuntu/repo/demoRepo
+hooks:
+  ApplicationStart:
+    - location: scripts/backup.sh
+      timeout: 300
+      runas: root
+
+  ValidateService:
+    - location: scripts/download.sh
+      timeout: 300
+      runas: root
