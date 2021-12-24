@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /appspec.yml
-    destination: /home/php7encode/projects
+    destination: /home/php7encode/karan
 hooks:
   ApplicationStart:
     - location: backup.sh
